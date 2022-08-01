@@ -25,25 +25,31 @@
         </nav>
     </header>
     <main id="contenido_contacto">
-            <form action="">
-                <fieldset>
-                    <legend>Formulario de Contacto</legend>
-                    <input type="text" placeholder="Nombre" id="nombre">
-                    <br>
-                    <input type="text" placeholder="E-mail" id="email">
-                    <br>
-                    <textarea placeholder="Escribinos..." id="escribinos"></textarea>
-                    <p id="socio"> Sos Socio?
-                        <select>
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select>
-                    </p>            
-                    <p id="noticias"><input type="checkbox" id="checkbox">Estas interesado en recibir la ultima informacion sobre Boca Juniors?</p>
-                    <input type="submit" value="Enviar" id="enviar">
-                    <input type="reset" value="Restablecer" id="resetear">
-                </fieldset>
-            </form>
+            <form>
+                <div class="mb-3">
+                <h2>Formulario de Contacto</h2>
+                  <label  class="form-label">Nombre</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">E-mail</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <label  class="form-label">Escribinos</label><br>
+                <textarea id="escribinos" class="form-control"></textarea><br>
+                <p id="socio"> Sos Socio?
+                    <select>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                </p>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Estoy interesado en recibir la ultima informacion</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Restablecer</button>
+              </form>
     </main>
     <footer>
         <!--Copyright-->
