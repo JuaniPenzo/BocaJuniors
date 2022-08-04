@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
 }
-/*PANTALLA GRANDE*/
-@media only screen and (min-width:950px){
     /* Cabecera */
     #boca_shops{
         height: 150px;
@@ -16,42 +14,22 @@
         height: 150px;
     }
     nav{
-        height: 50px;
         background-color: rgb(5, 5, 131);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
     }
-    #nav_item1{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
+    .navbar-brand{
+        color: white;
     }
-    #nav_item2{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
+    .navbar-toggler{
+        background-color: white;
     }
-    #nav_item3{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
+    .nav-link{
+        color: white;
     }
-    #nav_item4{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
+    .nav-link.active{
+        color: white;
     }
-    #nav_item5{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
-    }
-    .link_paginas{
-        text-decoration: none;
-        font-size: 20px;
-        color: #fff;
+    .navbar{
+        --bs-navbar-hover-color:yellow;
     }
     /*Formato Tabla*/
     table{
@@ -71,7 +49,7 @@
         font-size: 90%;
         text-align: center;
         padding: 2px;
-    }
+    }  
     /* Contenido index */
     #contenido_index_area1{
         width: 90%;
@@ -94,11 +72,7 @@
         margin: auto;
         width: 80%;
     }
-    .w-100{
-        height: 400px;
-        width: 80%;
-    }
-    /* Contenido historia */
+/* Contenido historia */
     #contenido_historia{
         display: flex;
         flex-direction: column;
@@ -136,25 +110,24 @@
     #contenido_historia_historia_parrafo{
         font-size: 20px;
         margin: 10px;
+        font-style: italic;
     }
     #contenido_historia_formacion_titulo{
         width: 100%;
         font-size: 40px;
-        margin: 10px;    
-    }
-    #contenido_historia_formacion_imagen{
-        width: 50%;
-        height: 350px;
         margin: 10px;
+        font-style: italic;    
     }
     #contenido_historia_formacion_parrafo{
         font-size: 20px;
         margin: 10px;
+        font-style: italic;
     }
     #contenido_historia_colores_titulo{
         width: 100%;
         font-size: 40px;
-        margin: 10px; 
+        margin: 10px;
+        font-style: italic; 
     }
     #contenido_historia_colores_imagen{
         width: 50%;
@@ -163,7 +136,88 @@
     }
     #contenido_historia_colores_parrafo{
         font-size: 20px;
-        margin: 10px;    
+        margin: 10px;
+        font-style: italic;    
+    }
+    .accordion{
+        --bs-accordion-active-color: blue;
+        --bs-accordion-active-bg: yellow;
+    }
+    .accordion-button{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    /* Contenido estadisticas */
+    #contenido_estadisticas{
+        width: 90%;
+        margin: auto;
+        background-color: rgba(159, 161, 162, 0.348);
+    }
+    .Titulos_estadisticas{
+        padding: 10px;
+    }
+    .table{
+        width: inherit;
+    }
+    .imagenes_copas{
+        width: 25%;
+        height: inherit;
+    }
+    /* Pie de Pagina */
+    #Copyright{
+        display: flex;
+        height: 40px;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-size: 0.8rem;
+    }
+    #link_redes{
+        display: flex;
+        height: 40px;
+        width: 50%;
+        color: white;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .bi{
+        color: white;
+    }
+    /* Contenido contacto */
+    #contenido_contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        width: 90%;
+        margin: auto;
+        animation-name: fondo;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+            /*Eventos*/
+        @keyframes fondo {
+            0% {background-color: blue;}
+            50% {background-color: yellow;}
+            100% {background-color: blue;}
+        } 
+/*PANTALLA GRANDE*/
+@media only screen and (min-width:950px){
+    /* Contenido index */
+    .w-100{
+        height: 400px;
+        width: 80%;
+    }
+    /* Contenido historia */
+    #contenido_historia_formacion_imagen{
+        width: 50%;
+        height: 350px;
+        margin: 10px;
     }
         /*Eventos*/
         .imagenes_historia:hover{
@@ -216,50 +270,16 @@
         width: fit-content;
     }
     /* Contenido estadisticas */
-    #contenido_estadisticas{
-        width: 90%;
-        margin: auto;
-        background-color: rgba(159, 161, 162, 0.348);
-    }
     #contenido_estadisticas_imagenes{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 300px;
     }
-    .Titulos_estadisticas{
-        padding: 10px;
-    }
-    .table{
-        width: inherit;
-    }
-    .imagenes_copas{
-        width: 25%;
-        height: inherit;
-    }
         /*Eventos*/
         .imagenes_copas:hover{
             transform:translate(0%, -30%);
             position: sticky;
-        }
-    /* Contenido contacto */
-    #contenido_contacto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 600px;
-        width: 90%;
-        margin: auto;
-        animation-name: fondo;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-    }
-            /*Eventos*/
-        @keyframes fondo {
-            0% {background-color: blue;}
-            50% {background-color: yellow;}
-            100% {background-color: blue;}
         }
     /* Pie de Pagina */
     footer{
@@ -267,514 +287,76 @@
         background-color: rgb(5, 5, 131);
         height: 40px;
         justify-content: center;
-        align-items: center;
-    }
-    #Copyright{
-        display: flex;
-        height: 40px;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-size: 15px;
-    }
-    #link_redes{
-        display: flex;
-        height: 40px;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-    #red_social1{
-        width: 33%;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-    }
-    #red_social2{
-        width: 33%;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-    }
-    #red_social3{
-        width: 33%;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
+        align-items: center;    
     }
 }
 /*PANTALLA MEDIA*/
 @media only screen and (max-width:950px) and (min-width:490px){    
-    /* Cabecera */
-        #boca_shops{
-            height: 150px;
-            display:flex;
-            flex-direction:row;
-            justify-content:center;
-            align-items:center;
-        }
-        #boca_shops_img{
-            height: 150px;
-        }
-        nav{
-            height: 50px;
-            background-color: rgb(5, 5, 131);
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        #nav_item1{
-            list-style-type: none;
-            width: 20%;
-            text-align: center;
-        }
-        #nav_item2{
-            list-style-type: none;
-            width: 20%;
-            text-align: center;
-        }
-        #nav_item3{
-            list-style-type: none;
-            width: 20%;
-            text-align: center;
-        }
-        #nav_item4{
-            list-style-type: none;
-            width: 20%;
-            text-align: center;
-        }
-        #nav_item5{
-            list-style-type: none;
-            width: 20%;
-            text-align: center;
-        }
-        .link_paginas{
-            text-decoration: none;
-            font-size: 20px;
-            color: #fff;
-        }
-        /*Formato Tabla*/
-        table{
-            margin: 10px;
-            border: 1px solid black;
-            height: 100%;
-            width: 70%;
-        }
-        th{
-            border: 1px solid black;
-            font-size: 90%;
-            text-align: center;
-            padding: 2px;
-        }
-        td{
-            border: 1px solid black;
-            font-size: 90%;
-            text-align: center;
-            padding: 2px;
-        }
-        /* Contenido index */
-        #contenido_index_area1{
-            width: 90%;
-            margin:auto
-        }
-        #contenido_index_titulo{
-            font-size: 50px;
-            margin: 10px;
-        }
-        #contenido_index_parrafo{
-            font-size: 25px;
-            margin: 10px;
-        }
-        #contenido_index{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        #carouselExampleIndicators{
-            margin: auto;
-            width: 80%;
-        }
-        .w-100{
-            height: 300px;
-            width: 80%;
-        }
-        /* Contenido historia */
-        #contenido_historia{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 90%;
-            width: 90%;
-            margin: auto;
-            background-color: rgba(223, 221, 221, 0.405);
-        }
-        #contenido_historia_historia{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 20%;
-            width: 100%;
-        }
-        #contenido_historia_formacion{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 40%;
-            width: 100%;
-        }
-        #contenido_historia_colores{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 40%;
-            width: 100%;
-        }
-        #contenido_historia_historia_titulo{
-            font-size: 40px;
-            margin: 10px;
-        }
-        #contenido_historia_historia_parrafo{
-            font-size: 20px;
-            margin: 10px;
-        }
-        #contenido_historia_formacion_titulo{
-            width: 100%;
-            font-size: 40px;
-            margin: 10px;    
-        }
-        #contenido_historia_formacion_imagen{
-            width: 50%;
-            height: 25%;
-            margin: 10px;
-        }
-        #contenido_historia_formacion_parrafo{
-            font-size: 20px;
-            margin: 10px;
-        }
-        #contenido_historia_colores_titulo{
-            width: 100%;
-            font-size: 40px;
-            margin: 10px; 
-        }
-        #contenido_historia_colores_imagen{
-            width: 50%;
-            height: 25%;
-            margin: 10px;
-        }
-        #contenido_historia_colores_parrafo{
-            font-size: 20px;
-            margin: 10px;    
-        }
-        /* Contenido plantel*/
-        #contenido_plantel{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            margin: auto;
-        }
-        .contenido_plantel_class{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 90%;
-            text-align: center;
-            margin: auto;
-        }
-        .contenido_plantel_titulo{
-            margin: 20px;
-        }
-        .contenido_plantel_img{
-            width: 90%;
-        }
-        #contenido_plantel_tabla{
-            margin: auto;
-        }
-        /* Contenido estadisticas */
-        #contenido_estadisticas{
-            width: 90%;
-            margin: auto;
-            background-color: rgba(159, 161, 162, 0.348);
-        }
-        #contenido_estadisticas_imagenes{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-        }
-        .Titulos_estadisticas{
-            padding: 10px;
-        }
-        .table{
-            width: inherit;
-        }
-        .imagenes_copas{
-            width: 25%;
-            height: inherit;
-        }
-        /* Contenido contacto */
-        #contenido_contacto{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 600px;
-            width: 90%;
-            margin: auto;
-            background-color: rgba(223, 221, 221, 0.405);
-        }
-        fieldset{
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        legend{
-            font-size: 25px;
-        }
-        #nombre{
-            width: 55%;
-            height: 20px;
-            margin: 8px;
-        }
-        #email{
-            width: 55%;
-            height: 20px;
-            margin: 8px;
-        }
-        #escribinos{
-            width: 80%;
-            height: 50px;
-            margin: 8px;
-        }
-        #socio{
-            margin: 8px;
-        }
-        #noticias{
-            margin: 8px;
-        }
-        #checkbox{
-            margin: 8px;
-        }
-        #enviar{
-            margin: 8px;
-            height: 20px;
-            width: 20%;
-        }
-        #resetear{
-            margin: 8px;
-            height: 20px;
-            width: 20%;
-        }
-        /* Pie de Pagina */
-        footer{
-            display: flex;
-            background-color: rgb(5, 5, 131);
-            height: 40px;
-            justify-content: center;
-            align-items: center;
-        }
-        #Copyright{
-            display: flex;
-            height: 40px;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-size: 15px;
-        }
-        #link_redes{
-            display: flex;
-            height: 40px;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-        }
-        #red_social1{
-            width: 33%;
-            text-align: center;
-            text-decoration: none;
-            color: #fff;
-        }
-        #red_social2{
-            width: 33%;
-            text-align: center;
-            text-decoration: none;
-            color: #fff;
-        }
-        #red_social3{
-            width: 33%;
-            text-align: center;
-            text-decoration: none;
-            color: #fff;
-        }
-    }
-/*PANTALLA CHICA*/
-@media only screen and (max-width:490px){
-    /* Cabecera */
-    #boca_shops{
-        height: 150px;
-        display:flex;
-        flex-direction:row;
-        justify-content:center;
-        align-items:center;
-    }
-    #boca_shops_img{
-        height: 150px;
-    }
-    nav{
-        background-color: rgb(5, 5, 131);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #nav_item1{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
-    }
-    #nav_item2{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
-    }
-    #nav_item3{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
-    }
-    #nav_item4{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
-    }
-    #nav_item5{
-        list-style-type: none;
-        width: 20%;
-        text-align: center;
-    }
-    .nav_item{
-        margin: 5px;
-    }
-    .link_paginas{
-        text-decoration: none;
-        font-size: 20px;
-        color: #fff;
-    }
-    /*Formato Tabla*/
-    table{
-        margin: 10px;
-        border: 1px solid black;
-        height: 100%;
-        width: 70%;
-    }
-    th{
-        border: 1px solid black;
-        font-size: 90%;
-        text-align: center;
-        padding: 2px;
-    }
-    td{
-        border: 1px solid black;
-        font-size: 90%;
-        text-align: center;
-        padding: 2px;
-    }
     /* Contenido index */
-    #contenido_index_area1{
-        width: 90%;
-        margin:auto
-    }
-    #contenido_index_titulo{
-        font-size: 50px;
-        margin: 10px;
-    }
-    #contenido_index_parrafo{
-        font-size: 25px;
-        margin: 10px;
-    }
-    #contenido_index{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    #carouselExampleIndicators{
-        margin: auto;
-        width: 80%;
-    }
     .w-100{
-        height: 200px;
+        height: 300px;
         width: 80%;
     }
     /* Contenido historia */
-    #contenido_historia{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 90%;
-        width: 90%;
-        margin: auto;
-        background-color: rgba(223, 221, 221, 0.405);
-    }
-    #contenido_historia_historia{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 20%;
-        width: 100%;
-    }
-    #contenido_historia_formacion{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 40%;
-        width: 100%;
-    }
-    #contenido_historia_colores{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 40%;
-        width: 100%;
-    }
-    #contenido_historia_historia_titulo{
-        font-size: 40px;
-        margin: 10px;
-    }
-    #contenido_historia_historia_parrafo{
-        font-size: 20px;
-        margin: 10px;
-    }
-    #contenido_historia_formacion_titulo{
-        width: 100%;
-        font-size: 40px;
-        margin: 10px;    
-    }
     #contenido_historia_formacion_imagen{
         width: 50%;
         height: 25%;
         margin: 10px;
     }
-    #contenido_historia_formacion_parrafo{
-        font-size: 20px;
-        margin: 10px;
+    /* Contenido plantel*/
+        #contenido_plantel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto;
     }
-    #contenido_historia_colores_titulo{
-        width: 100%;
-        font-size: 40px;
-        margin: 10px; 
+    .contenido_plantel_class{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        text-align: center;
+        margin: auto;
     }
-    #contenido_historia_colores_imagen{
+    .contenido_plantel_titulo{
+        margin: 20px;
+    }
+    .contenido_plantel_img{
+        width: 90%;
+    }
+    #contenido_plantel_tabla{
+        margin: auto;
+    }
+        /* Contenido estadisticas */
+    #contenido_estadisticas_imagenes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+        /* Pie de Pagina */
+    footer{
+        display: flex;
+        background-color: rgb(5, 5, 131);
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+/*PANTALLA CHICA*/
+@media only screen and (max-width:490px){
+    /* Contenido index */
+    .w-100{
+        height: 200px;
+        width: 80%;
+    }
+    /* Contenido historia */
+    #contenido_historia_formacion_imagen{
         width: 50%;
         height: 25%;
         margin: 10px;
-    }
-    #contenido_historia_colores_parrafo{
-        font-size: 20px;
-        margin: 10px;    
     }
     /* Contenido plantel*/
     #contenido_plantel{
@@ -803,120 +385,18 @@
         margin: auto;
     }
     /* Contenido estadisticas */
-    #contenido_estadisticas{
-        width: 90%;
-        margin: auto;
-        background-color: rgba(159, 161, 162, 0.348);
-    }
     #contenido_estadisticas_imagenes{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 150px;
     }
-    .Titulos_estadisticas{
-        padding: 10px;
-    }
-    .table{
-        width: inherit;
-    }
-    .imagenes_copas{
-        width: 25%;
-        height: inherit;
-    }
-    /* Contenido contacto */
-    #contenido_contacto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 600px;
-        width: 90%;
-        margin: auto;
-        background-color: rgba(223, 221, 221, 0.405);
-    }
-    fieldset{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    legend{
-        font-size: 25px;
-    }
-    #nombre{
-        width: 55%;
-        height: 20px;
-        margin: 8px;
-    }
-    #email{
-        width: 55%;
-        height: 20px;
-        margin: 8px;
-    }
-    #escribinos{
-        width: 80%;
-        height: 50px;
-        margin: 8px;
-    }
-    #socio{
-        margin: 8px;
-    }
-    #noticias{
-        margin: 8px;
-    }
-    #checkbox{
-        margin: 8px;
-    }
-    #enviar{
-        margin: 8px;
-        height: 20px;
-        width: 20%;
-    }
-    #resetear{
-        margin: 8px;
-        height: 20px;
-        width: 20%;
-    }
     /* Pie de Pagina */
     footer{
         display: flex;
         background-color: rgb(5, 5, 131);
-        height: 50px;
+        height: 60px;
         justify-content: center;
         align-items: center;
-    }
-    #Copyright{
-        display: flex;
-        height: 40px;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-size: 15px;
-    }
-    #link_redes{
-        display: flex;
-        height: 40px;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-    #red_social1{
-        width: 33%;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-    }
-    #red_social2{
-        width: 33%;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-    }
-    #red_social3{
-        width: 33%;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-    }     
+    }   
 }
