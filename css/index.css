@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+/*VARIABLES*/
+:root{
+    --Azul_Boca: rgb(7, 7, 139);
+    --Amarillo_Boca:rgb(255, 247, 0);
+    --Color_Fondo:rgba(173, 169, 169, 0.671);
+}
     /* Cabecera */
     #boca_shops{
         height: 150px;
@@ -14,7 +20,7 @@
         height: 150px;
     }
     nav{
-        background-color: rgb(5, 5, 131);
+        background-color: var(--Azul_Boca);
     }
     .navbar-brand{
         color: white;
@@ -29,7 +35,7 @@
         color: white;
     }
     .navbar{
-        --bs-navbar-hover-color:yellow;
+        --bs-navbar-hover-color:var(--Amarillo_Boca);
     }
     /*Formato Tabla*/
     table{
@@ -80,7 +86,7 @@
         height: 90%;
         width: 90%;
         margin: auto;
-        background-color: rgba(223, 221, 221, 0.405);
+        background-color: var(--Color_Fondo);
     }
     #contenido_historia_historia{
         display: flex;
@@ -140,8 +146,8 @@
         font-style: italic;    
     }
     .accordion{
-        --bs-accordion-active-color: blue;
-        --bs-accordion-active-bg: yellow;
+        --bs-accordion-active-color: var(--Azul_Boca);
+        --bs-accordion-active-bg: var(--Amarillo_Boca);
     }
     .accordion-button{
         font-size: 25px;
@@ -151,7 +157,7 @@
     #contenido_estadisticas{
         width: 90%;
         margin: auto;
-        background-color: rgba(159, 161, 162, 0.348);
+        background-color: var(--Color_Fondo);
     }
     .Titulos_estadisticas{
         padding: 10px;
@@ -184,6 +190,9 @@
         text-align: center;
         font-size: 0.8rem;
     }
+    #Copyright_parrafo{
+        margin: auto;
+    }
     .bi{
         color: white;
     }
@@ -202,9 +211,9 @@
     }
             /*Eventos*/
         @keyframes fondo {
-            0% {background-color: blue;}
-            50% {background-color: yellow;}
-            100% {background-color: blue;}
+            0% {background-color: var(--Azul_Boca);}
+            50% {background-color: var(--Amarillo_Boca);}
+            100% {background-color: var(--Azul_Boca);}
         } 
 /*PANTALLA GRANDE*/
 @media only screen and (min-width:950px){
@@ -284,7 +293,7 @@
     /* Pie de Pagina */
     footer{
         display: flex;
-        background-color: rgb(5, 5, 131);
+        background-color: var(--Azul_Boca);
         height: 40px;
         justify-content: center;
         align-items: center;    
@@ -339,7 +348,7 @@
         /* Pie de Pagina */
     footer{
         display: flex;
-        background-color: rgb(5, 5, 131);
+        background-color: var(--Azul_Boca);
         height: 40px;
         justify-content: center;
         align-items: center;
@@ -394,7 +403,7 @@
     /* Pie de Pagina */
     footer{
         display: flex;
-        background-color: rgb(5, 5, 131);
+        background-color: var(--Azul_Boca);
         height: 60px;
         justify-content: center;
         align-items: center;
