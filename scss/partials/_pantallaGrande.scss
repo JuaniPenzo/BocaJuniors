@@ -1,0 +1,65 @@
+@media only screen and (min-width:950px){
+    /* Contenido index */
+    .w-100{
+        height: 400px;
+        width: 80%;
+    }
+    /* Contenido historia */
+    #contenido_historia_formacion_imagen{
+        width: 50%;
+        height: 350px;
+        margin: 10px;
+    }
+        /*Eventos*/
+        .imagenes_historia:hover{
+            transform: translate(48%)
+                        scale(1.5, 1.5);
+            position: sticky;
+        }
+    /* Contenido plantel */
+    #contenido_plantel{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 4% 96%;
+        grid-template-areas:"A1 A3"
+                            "A2 A4";
+        &_area1{
+            grid-area: A1;
+            @include display_flex(flex, none, column , center , none , none , none);
+        }
+        &_area2{
+            grid-area: A2;
+            @include display_flex(flex, none, column , center , center , center , 20px);  
+        }
+        &_area3{
+            grid-area: A3;
+            @include display_flex(flex, none, column , center , none , flex-start, none);
+        }
+        &_area4{
+            grid-area: A4;
+            @include display_flex(flex, none, column , flex-start , none , flex-start, none);  
+        }
+    }
+    .contenido_plantel_titulo{
+        margin: auto;
+        font-size: 20px;
+        height: inherit;
+        width: fit-content;
+    }
+    /* Contenido estadisticas */
+    #contenido_estadisticas_imagenes{
+        @include display_flex(flex, none, none , center , center , none , none); 
+        height: 300px;
+    }
+        /*Eventos*/
+        .imagenes_copas:hover{
+            transform:translate(0%, -30%);
+            position: sticky;
+        }
+    /* Pie de Pagina */
+    footer{
+        @include display_flex(flex, none, none , center , center , none , none);
+        background-color: blue;
+        height: 40px;    
+    }    
+}

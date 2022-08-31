@@ -1,0 +1,43 @@
+@media only screen and (max-width:490px){
+    /* Contenido index */
+    .w-100{
+        height: 200px;
+        width: 80%;
+    }
+    /* Contenido historia */
+    #contenido_historia_formacion_imagen{
+        width: 50%;
+        height: 25%;
+        margin: 10px;
+    }
+    /* Contenido plantel*/
+    #contenido_plantel{
+        @include display_flex(flex, none, column, center , center , none , auto);
+        width: 90%;
+        &_tabla{
+            margin: auto;
+        }
+    }
+    .contenido_plantel_class{
+        @include display_flex(flex, none, row, center , none , none , auto);
+        width: 90%;
+        text-align: center;
+    }
+    .contenido_plantel_titulo{
+        margin: 20px;
+    }
+    .contenido_plantel_img{
+        width: 90%;
+    }
+    /* Contenido estadisticas */
+    #contenido_estadisticas_imagenes{
+        @include display_flex(flex, none, none, center , center , none , none);
+        height: 150px;
+    }
+    /* Pie de Pagina */
+    footer{
+        @include display_flex(flex, none, none, center , center , none , none);
+        background-color: blue;
+        height: 60px;
+    }
+}

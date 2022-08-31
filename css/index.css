@@ -65,7 +65,12 @@ table {
       margin: 10px; }
   #contenido_index #carouselExampleIndicators {
     margin: auto;
-    width: 80%; }
+    width: 70%; }
+    #contenido_index #carouselExampleIndicators button span {
+      background-color: blue; }
+    #contenido_index #carouselExampleIndicators .carousel-indicators button {
+      background-color: yellow;
+      height: 10px; }
 
 /* Contenido historia */
 #contenido_historia {
@@ -135,7 +140,11 @@ table {
   padding: 10px; }
 
 .table {
-  width: inherit; }
+  width: inherit;
+  --bs-table-color: blue;
+  --bs-table-bg: yellow;
+  --bs-table-striped-color: yellow;
+  --bs-table-striped-bg: blue; }
 
 .imagenes_copas {
   width: 25%;
