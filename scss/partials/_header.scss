@@ -1,0 +1,25 @@
+#boca_shops{
+    height: 150px;
+    @include display_flex(flex, wrap, none, center, center, none , none);
+    &_img{
+        height: 150px;        
+    }
+}
+nav{
+    background-color: blue;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-toggler{
+    background-color: white;
+}
+.nav-link{
+    color: white;
+}
+.nav-link.active{
+    color: white;
+}
+.navbar{
+    --bs-navbar-hover-color: yellow;
+}

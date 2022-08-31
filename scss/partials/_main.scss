@@ -1,0 +1,118 @@
+/* Contenido index */
+#contenido_index{
+    @include display_flex(flex, wrap, none , space-between , none , none , none);
+    &_area{
+        width: 90%;
+        margin:auto;
+        &_titulo{
+            font-size: 50px;
+            margin: 10px;            
+        }
+        &_parrafo{
+            font-size: 25px;
+            margin: 10px;            
+        }        
+    }
+    #carouselExampleIndicators{
+        margin: auto;
+        width: 70%;
+        button{
+            span{
+                background-color: blue;
+            }
+        }
+        .carousel-indicators{
+            button{
+               background-color: yellow;
+               height: 10px;
+            }
+        }
+    }
+}
+/* Contenido historia */
+#contenido_historia{
+    @include display_flex(flex, none, column , center , none , none , auto);
+    height: 90%;
+    width: 90%;
+    background-color: $Color_Fondo;
+    &_historia{
+        @include display_flex(flex, none, column , center , none , none , none);
+        height: 20%;
+        width: 100%;
+        &_titulo{
+            width: 100%;
+            font-size: 40px;
+            margin: 10px;
+        }
+        &_parrafo{
+            font-size: 20px;
+            margin: 10px;
+            font-style: italic;            
+        }
+    }
+    &_formacion{
+        @include display_flex(flex, none, column , center , none , none , none);
+        height: 40%;
+        width: 100%;
+        &_titulo{
+            @extend #contenido_historia_historia_titulo
+        }
+        &_parrafo{
+            @extend #contenido_historia_historia_parrafo         
+        }        
+    }
+    &_colores{
+        @include display_flex(flex, none, column , center , none , none , none);
+        height: 40%;
+        width: 100%;
+        &_titulo{
+            @extend #contenido_historia_historia_titulo
+        }
+        &_parrafo{
+            @extend #contenido_historia_historia_parrafo             
+        }
+    }
+}
+.accordion{
+    --bs-accordion-active-color: blue;
+    --bs-accordion-active-bg: yellow;
+    &-button{
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+/* Contenido estadisticas */
+#contenido_estadisticas{
+    width: 90%;
+    margin: auto;
+    background-color: rgba(250, 250, 250, 0.571);
+}
+.Titulos_estadisticas{
+    padding: 10px;
+}
+.table{
+    width: inherit;
+    --bs-table-color: blue;
+    --bs-table-bg: yellow;
+    --bs-table-striped-color: yellow;
+    --bs-table-striped-bg: blue;
+}
+.imagenes_copas{
+    width: 25%;
+    height: inherit;
+}
+/* Contenido contacto */
+#contenido_contacto{
+    @include display_flex(flex, none, column , center , center , none , auto);
+    height: 600px;
+    width: 90%;
+    animation-name: fondo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+        /*Eventos*/
+    @keyframes fondo {
+        0% {background-color: $Azul_Boca}
+        50% {background-color: $Amarillo_Boca}
+        100% {background-color: $Azul_Boca}
+    }

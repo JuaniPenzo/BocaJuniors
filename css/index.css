@@ -2,7 +2,18 @@
   margin: 0;
   padding: 0; }
 
-/* Cabecera */
+table {
+  margin: 10px;
+  border: 1px solid black;
+  height: 100%;
+  width: 70%; }
+  table th, table td {
+    border: 1px solid black;
+    font-size: 90%;
+    text-align: center;
+    padding: 2px; }
+
+/* Header */
 #boca_shops {
   height: 150px;
   display: flex;
@@ -33,18 +44,7 @@ nav {
 .navbar {
   --bs-navbar-hover-color: yellow; }
 
-/* Formato Tabla */
-table {
-  margin: 10px;
-  border: 1px solid black;
-  height: 100%;
-  width: 70%; }
-  table th, table td {
-    border: 1px solid black;
-    font-size: 90%;
-    text-align: center;
-    padding: 2px; }
-
+/* Main */
 /* Contenido index */
 #contenido_index {
   display: flex;
@@ -174,7 +174,7 @@ table {
   100% {
     background-color: #07078b; } }
 
-/* Pie de Pagina */
+/* Footer */
 #Copyright {
   display: flex;
   flex-wrap: none;

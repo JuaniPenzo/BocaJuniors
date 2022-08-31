@@ -4,6 +4,7 @@
 }
 
 @import "variables/colores";
+@import "variables/tabla";
 
 @mixin display_flex ($display , $flexwrap , $flex-dir , $justify , $aling , $content, $margin) {
     display: $display;
@@ -15,189 +16,15 @@
     margin: $margin;
 }
 
-/* Cabecera */
-#boca_shops{
-    height: 150px;
-    @include display_flex(flex, wrap, none, center, center, none , none);
-    &_img{
-        height: 150px;        
-    }
-}
-nav{
-    background-color: blue;
-}
-.navbar-brand{
-    color: white;
-}
-.navbar-toggler{
-    background-color: white;
-}
-.nav-link{
-    color: white;
-}
-.nav-link.active{
-    color: white;
-}
-.navbar{
-    --bs-navbar-hover-color: yellow;
-}
-/* Formato Tabla */
-table{
-    margin: 10px;
-    border: 1px solid black;
-    height: 100%;
-    width: 70%;
-    th{
-        border: 1px solid black;
-        font-size: 90%;
-        text-align: center;
-        padding: 2px;
-    }
-    td{
-        @extend th
-    }
-}
-/* Contenido index */
-#contenido_index{
-    @include display_flex(flex, wrap, none , space-between , none , none , none);
-    &_area{
-        width: 90%;
-        margin:auto;
-        &_titulo{
-            font-size: 50px;
-            margin: 10px;            
-        }
-        &_parrafo{
-            font-size: 25px;
-            margin: 10px;            
-        }        
-    }
-    #carouselExampleIndicators{
-        margin: auto;
-        width: 70%;
-        button{
-            span{
-                background-color: blue;
-            }
-        }
-        .carousel-indicators{
-            button{
-               background-color: yellow;
-               height: 10px;
-            }
-        }
-    }
-}
-/* Contenido historia */
-#contenido_historia{
-    @include display_flex(flex, none, column , center , none , none , auto);
-    height: 90%;
-    width: 90%;
-    background-color: $Color_Fondo;
-    &_historia{
-        @include display_flex(flex, none, column , center , none , none , none);
-        height: 20%;
-        width: 100%;
-        &_titulo{
-            width: 100%;
-            font-size: 40px;
-            margin: 10px;
-        }
-        &_parrafo{
-            font-size: 20px;
-            margin: 10px;
-            font-style: italic;            
-        }
-    }
-    &_formacion{
-        @include display_flex(flex, none, column , center , none , none , none);
-        height: 40%;
-        width: 100%;
-        &_titulo{
-            @extend #contenido_historia_historia_titulo
-        }
-        &_parrafo{
-            @extend #contenido_historia_historia_parrafo         
-        }        
-    }
-    &_colores{
-        @include display_flex(flex, none, column , center , none , none , none);
-        height: 40%;
-        width: 100%;
-        &_titulo{
-            @extend #contenido_historia_historia_titulo
-        }
-        &_parrafo{
-            @extend #contenido_historia_historia_parrafo             
-        }
-    }
-}
-.accordion{
-    --bs-accordion-active-color: blue;
-    --bs-accordion-active-bg: yellow;
-    &-button{
-        font-size: 25px;
-        font-weight: 700;
-    }
-}
-/* Contenido estadisticas */
-#contenido_estadisticas{
-    width: 90%;
-    margin: auto;
-    background-color: rgba(250, 250, 250, 0.571);
-}
-.Titulos_estadisticas{
-    padding: 10px;
-}
-.table{
-    width: inherit;
-    --bs-table-color: blue;
-    --bs-table-bg: yellow;
-    --bs-table-striped-color: yellow;
-    --bs-table-striped-bg: blue;
-}
-.imagenes_copas{
-    width: 25%;
-    height: inherit;
-}
-/* Contenido contacto */
-#contenido_contacto{
-    @include display_flex(flex, none, column , center , center , none , auto);
-    height: 600px;
-    width: 90%;
-    animation-name: fondo;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-}
-        /*Eventos*/
-    @keyframes fondo {
-        0% {background-color: $Azul_Boca}
-        50% {background-color: $Amarillo_Boca}
-        100% {background-color: $Azul_Boca}
-    }
-/* Pie de Pagina */
-#Copyright{
-    @include display_flex(flex, none, none , center , center , none , none);
-    height: 40px;
-    width: 50%;
-    text-align: center;
-    color: #fff;
-    font-size: 0.8rem;
-    &_parrafo{
-        margin: auto;
-    }
-}
-#link_redes{
-    @include display_flex(flex, none, none , space-around , center , none , none);
-    height: 40px;
-    width: 50%;
-    color: white;
-    text-align: center;
-    font-size: 0.8rem;
-}
-.bi{
-    color: white;
-}
+/* Header */
+@import "partials/header";
+
+/* Main */
+@import "partials/main";
+
+/* Footer */
+@import "partials/footer";
+
 /*PANTALLA GRANDE*/
 @import "partials/pantallaGrande";
 

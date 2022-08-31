@@ -1,0 +1,22 @@
+#Copyright{
+    @include display_flex(flex, none, none , center , center , none , none);
+    height: 40px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+    &_parrafo{
+        margin: auto;
+    }
+}
+#link_redes{
+    @include display_flex(flex, none, none , space-around , center , none , none);
+    height: 40px;
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.bi{
+    color: white;
+}
