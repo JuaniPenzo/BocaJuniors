@@ -23,7 +23,7 @@
         }
         .carousel-indicators{
             button{
-               background-color: yellow;
+               background-color: rgba(255, 255, 0, 0.624);
                height: 10px;
             }
         }
@@ -75,7 +75,7 @@
 }
 .accordion{
     --bs-accordion-active-color: blue;
-    --bs-accordion-active-bg: yellow;
+    --bs-accordion-active-bg: rgba(255, 255, 0, 0.624);
     &-button{
         font-size: 25px;
         font-weight: 700;
@@ -93,8 +93,8 @@
 .table{
     width: inherit;
     --bs-table-color: blue;
-    --bs-table-bg: yellow;
-    --bs-table-striped-color: yellow;
+    --bs-table-bg: rgba(255, 255, 0, 0.624);
+    --bs-table-striped-color: rgba(255, 255, 0, 0.624);
     --bs-table-striped-bg: blue;
 }
 .imagenes_copas{
@@ -106,13 +106,4 @@
     @include display_flex(flex, none, column , center , center , none , auto);
     height: 600px;
     width: 90%;
-    animation-name: fondo;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
 }
-        /*Eventos*/
-    @keyframes fondo {
-        0% {background-color: $Azul_Boca}
-        50% {background-color: $Amarillo_Boca}
-        100% {background-color: $Azul_Boca}
-    }
